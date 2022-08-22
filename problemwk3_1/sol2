@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char number[100];
+    int len=0;
+    int check=0;
+    scanf_s("%s",&number);
+    while(number[check]!='\0')
+    {
+        check++;
+        len++;
+    }
+    if(len>=3)
+    {
+        for(int i=0; i<3; i++)
+        {
+            printf("%c ",number[len-3+i]);
+            if(i!=2)
+            {
+                printf(", ");
+            }
+        }
+    }
+    else
+    {
+        printf("error too low value");
+    }
+    return 0;
+}
